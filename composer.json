@@ -1,0 +1,23 @@
+{
+    "name": "kkxdev/collective-html-wrapper",
+    "description": "A wrapper to support LaravelCollective HTML/Form in Laravel 11 using Spatie's Laravel HTML.",
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^10 || ^11",
+        "spatie/laravel-html": "dev-main"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kkxdev\\CollectiveHtmlWrapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kkxdev"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
