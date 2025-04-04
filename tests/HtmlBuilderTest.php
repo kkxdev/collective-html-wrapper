@@ -26,4 +26,12 @@ class HtmlBuilderTest extends TestCase
         $expected = '<label class="form-label" for="email">Email Address</label>';
         $this->assertStringContainsString($expected, (string) $result);
     }
+
+    /** @test */
+    public function it_generates_a_text_input()
+    {
+        $result = $this->htmlBuilder->input('text', 'username', 'JohnDoe', ['class' => 'form-control']);
+        $expected = '<input class="form-control" type="text" name="username" id="username" value="JohnDoe">';
+        $this->assertStringContainsString($expected, (string) $result);
+    }
 }

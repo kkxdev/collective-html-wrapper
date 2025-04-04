@@ -1,6 +1,8 @@
 <?php
 
 namespace Kkxdev\CollectiveHtmlWrapper;
+use Spatie\Html\Elements\Input;
+use Spatie\Html\Elements\Label;
 use Spatie\Html\Html;
 
 class HtmlBuilder
@@ -33,12 +35,12 @@ class HtmlBuilder
 
     }
 
-    public function label($name, $value = null, $options = [], $escape_html = true) {
+    public function label($name, $value = null, $options = [], $escape_html = true) : Label {
         return $this->html->label($value ?? ucfirst(str_replace('_', ' ', $name)))->attribute('for', $name)->attributes($options);
     }
 
-    public function input($type, $name, $value = null, $options = []) {
-
+    public function input($type, $name, $value = null, $options = []) : Input{
+        return $this->html->input($type, $name, $value)->attributes($options);
     }
 
     public function text($name, $value = null, $options = []) {
