@@ -34,7 +34,7 @@ class HtmlBuilder
     }
 
     public function label($name, $value = null, $options = [], $escape_html = true) {
-
+        return $this->html->label($value ?? ucfirst(str_replace('_', ' ', $name)))->attribute('for', $name)->attributes($options);
     }
 
     public function input($type, $name, $value = null, $options = []) {
